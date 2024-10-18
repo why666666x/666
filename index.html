@@ -467,7 +467,7 @@
                 </li>
             </ul>
             <div class="notice">
-                <i class="fas fa-info-circle"></i>部分节点无法访问，请更换！
+                <i class="fas fa-info-circle"></i>部分网站无法访问，请更换！
             </div>
             <div id="stats-container"></div>
         </main>
@@ -497,11 +497,11 @@ function checkUrl(url, li) {
 
         const timeoutId = setTimeout(() => {
             if (!isResolved) {
-                updateUrlStatus(li, false, 5000);
+                updateUrlStatus(li, false, 10000);
                 isResolved = true;
                 resolve(false);
             }
-        }, 5000); // 5秒超时
+        }, 10000); // 5秒超时
 
         img.onload = function() {
             if (!isResolved) {
